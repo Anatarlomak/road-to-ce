@@ -1,16 +1,41 @@
-// ===========================================
-//  script.js  ·  ใช้ทำให้เว็บโต้ตอบได้
-// ===========================================
+/* ===========================================
+   style.css  ·  ใช้ตกแต่งหน้าตาของเว็บ
+   =========================================== */
 
-// 1) หาปุ่มและช่องข้อความจากหน้าเว็บ (ตาม id)
-const button = document.getElementById("myButton");
-const output = document.getElementById("output");
+/* ทั้งหน้า (body) */
+body {
+  font-family: sans-serif;
+  background: #f4f6fb;
+  color: #1a2238;
+  max-width: 600px;
+  margin: 40px auto;     /* จัดเนื้อหาให้อยู่กลางจอ */
+  padding: 0 20px;
+  line-height: 1.6;
+}
 
-// 2) ตัวแปรเก็บจำนวนครั้งที่กด
-let count = 0;
+/* หัวข้อใหญ่ */
+h1 {
+  color: #0b5fff;
+}
 
-// 3) เมื่อกดปุ่ม -> บวกค่า แล้วแสดงข้อความ
-button.addEventListener("click", function () {
-  count = count + 1;
-  output.innerText = "คุณกดปุ่มไปแล้ว " + count + " ครั้ง";
-});
+/* ปุ่ม */
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background: #0b5fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ปุ่มตอนเอาเมาส์ไปชี้ */
+button:hover {
+  background: #0843c4;
+}
+
+/* ข้อความผลลัพธ์ที่ JavaScript จะเปลี่ยน */
+#output {
+  font-weight: bold;
+  color: #16a34a;
+}
